@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sam's Hangman</title>
+</head>
+
+<body>
+<h1>Welcome to Hangman</h1>
+
+
+<img src="hangman1.gif" alt="Hangman Hook" width="500" height="600">
+<center><button type="button" class="btn btn-success navbar-btn" onClick= "makeGuess()">Start Game</button></center>
+<!-- Event driven programming - user starts game on click
+Functions as first class citizens - function makeGuess (defined below) can be called with the button click
+-->
+
+<script>
+
+//Event driven programming - user is prompted for a word
+  var newWord = prompt("Please enter the word to be guessed:")
+  //Scope - become global be default in javascript
+
+  var theWord = ['_']
+
+  for(i = 0; i < (newWord.length - 1); i++) {
+    theWord.push('_')
+  }
+
+function printWord(){
+  var tempy = theWord.join() //variable defined within a function have local scope and can only be used within the function
+  tempy2 = tempy.fontsize("100").fontcolor("#000000").bold()
+  document.write(tempy2)
+}
+  printWord()
+
+//success = theWord.length
+function makeGuess(){
+  var guess = prompt("Please guess a letter:") //scope - guess exists only wihtin a function
+
+  //for(x = 0; x < theWord.length; x++){
+    //  if theWord[x] == newWord[x]{
+    //    theWord[x] = newWord[x]
+        //  success = sucess - 1
+    //  }
+//  }
+  }
+
+  while(success != 0){
+  makeGuess()
+}
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
